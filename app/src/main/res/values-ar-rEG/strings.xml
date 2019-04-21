@@ -9,6 +9,7 @@
 
     <string name="login" translatable="false">تسجيل الدخول</string>
     <string name="register" translatable="false">اشتراك جديد</string>
+    <string name="forgetpassword" translatable="false">نسيت كلمة السر </string>
 
 
 </resources>

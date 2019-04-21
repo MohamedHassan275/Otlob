@@ -6,9 +6,11 @@
     <string name="action_settings">Settings</string>
 
     <string name="search_about_restraunt" translatable="false">Search About 200 Restraunt ... </string>
-    <string name="login" translatable="false">Login</string>
 
+    <string name="login" translatable="false">Login</string>
     <string name="register" translatable="false">Register</string>
+    <string name="forgetpassword" translatable="false">Forget password</string>
+
 
 
 

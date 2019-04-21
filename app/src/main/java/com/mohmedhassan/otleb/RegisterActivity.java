@@ -5,8 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,6 +26,8 @@ public class RegisterActivity extends AppCompatActivity {
     TextView Tv_Regiseter_Login;
     EditText Ed_birthDay_register;
     private int mYear, mMonth, mDay;
+    EditText Ed_Password,Ed_ConfirmPassword;
+    private CheckBox checkBoxShowPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +38,25 @@ public class RegisterActivity extends AppCompatActivity {
         Btn_Register = findViewById(R.id.btn_register_register);
         Tv_Regiseter_Login = findViewById(R.id.tv_register_login);
         Ed_birthDay_register = findViewById(R.id.Ed_birthDay_register);
+        Ed_Password = findViewById(R.id.password_register);
+        Ed_ConfirmPassword = findViewById(R.id.confirmPassword_register);
+        checkBoxShowPassword = findViewById(R.id.checkboxPassword_register);
+
+        checkBoxShowPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // checkbox status is changed from uncheck to checked.
+                if (!isChecked) {
+                    // show password
+                    Ed_Password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    Ed_ConfirmPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                } else {
+                    // hide password
+                    Ed_Password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    Ed_ConfirmPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
+            }
+        });
 
         Ed_birthDay_register.setOnClickListener(new View.OnClickListener() {
 
