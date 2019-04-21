@@ -39,7 +39,7 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="10dp"
-                        android:textColorHint="#D5D0D0"
+                        android:textColorHint="#A8A4A4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -51,7 +51,7 @@
                             android:hint="Email"
                             android:padding="7dp"
                             android:gravity="center"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
                             android:layout_gravity="center"
@@ -64,7 +64,7 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="10dp"
-                        android:textColorHint="#D5D0D0"
+                        android:textColorHint="#A8A4A4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -76,7 +76,7 @@
                             android:hint="Frist Name"
                             android:padding="7dp"
                             android:gravity="center"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
                             android:layout_gravity="center"
@@ -89,7 +89,7 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="10dp"
-                        android:textColorHint="#D5D0D0"
+                        android:textColorHint="#A8A4A4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -103,7 +103,7 @@
                             android:layout_gravity="center"
                             android:textSize="15sp"
                             android:padding="7dp"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
                             android:inputType="textEmailAddress"
@@ -114,7 +114,7 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="10dp"
-                        android:textColorHint="#D5D0D0"
+                        android:textColorHint="#A8A4A4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -128,7 +128,7 @@
                             android:layout_gravity="center"
                             android:textSize="15sp"
                             android:padding="7dp"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:inputType="number"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
@@ -139,7 +139,7 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="10dp"
-                        android:textColorHint="#D5D0D0"
+                        android:textColorHint="#A8A4A4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -155,7 +155,7 @@
                             android:textSize="15sp"
                             android:focusable="false"
                             android:inputType="number"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:maxLines="1"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
@@ -166,7 +166,7 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="10dp"
-                        android:textColorHint="#D5D0D0"
+                        android:textColorHint="#A8A4A4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -181,7 +181,7 @@
                             android:layout_gravity="center"
                             android:textSize="15sp"
                             android:inputType="textPassword"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:maxLines="1"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
@@ -190,7 +190,7 @@
                     </android.support.design.widget.TextInputLayout>
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="10dp"
-                        android:textColorHint="#D5D0D0"
+                        android:textColorHint="#A8A4A4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -204,7 +204,7 @@
                             android:layout_gravity="center"
                             android:textSize="15sp"
                             android:padding="7dp"
-                            android:textColor="#ffffff"
+                            android:textColor="#000"
                             android:inputType="textPassword"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
@@ -214,7 +214,32 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <LinearLayout
-                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkboxPassword_register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="5dp"
+                            android:textColor="#131212"
+                            android:text="Show Password"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -225,7 +250,7 @@
                             android:layout_height="wrap_content"
                             android:paddingRight="5dp"
                             android:textColor="#6F6D6D"
-                            android:text="Gender (Chose)"
+                            android:text="الجنس (اختياري)"
                             android:textSize="15sp" />
 
                         <RadioGroup
@@ -236,18 +261,20 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
-                                android:layout_marginLeft="15dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Female "
-                                android:textSize="15sp"/>
-
-                            <RadioButton
                                 android:layout_marginLeft="10dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Male"
+                                android:text="ذكر"
                                 android:textSize="15sp"/>
+
+                            <RadioButton
+                                android:layout_marginLeft="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="انثي "
+                                android:textSize="15sp"/>
+
+
 
                         </RadioGroup>
                     </LinearLayout>
@@ -308,7 +335,16 @@
 
                   </LinearLayout>
 
+                   <View
+                       android:layout_marginTop="5dp"
+                       android:layout_marginLeft="25dp"
+                       android:layout_marginRight="25dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="1dp"
+                       android:background="#BEBDBD"/>
+
                    <LinearLayout
+                       android:layout_marginTop="5dp"
                        android:orientation="horizontal"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content">
@@ -336,30 +372,7 @@
 
             </android.support.v7.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:orientation="horizontal">
 
-                <CheckBox
-                    android:id="@+id/checkboxPassword_register"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="5dp"
-                    android:textColor="#131212"
-                    android:text="Show Password"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
 
             <Button
                 android:id="@+id/btn_register_register"
