@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeScreen"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="الصفحة الرئيسية" />
+        <item
+            android:id="@+id/order"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="طلباتي السابقة" />
+        <item
+            android:id="@+id/offer"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="العروض" />
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="الإشعارات" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/massage"
+                android:icon="@drawable/ic_menu_share"
+                android:title="المحادثة الفورية" />
+            <item
+                android:id="@+id/about_app"
+                android:icon="@drawable/ic_menu_send"
+                android:title="حول التطبيق" />
+        </menu>
+    </item>
+
+</menu>
