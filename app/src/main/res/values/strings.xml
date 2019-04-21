@@ -6,35 +6,9 @@
     <string name="action_settings">Settings</string>
 
     <string name="search_about_restraunt" translatable="false">Search About 200 Restraunt ... </string>
+    <string name="login" translatable="false">Login</string>
 
-
-    <string name="matam_100lava" translatable="false"> 100 Lava  </string>
-    <string name="matam_100lavad" translatable="false"> 100 Lava  </string>
-    <string name="matam_to_eat" translatable="false"> 2 eat </string>
-    <string name="matam_2m_express" translatable="false"> 2M Express </string>
-    <string name="matam_ali_khafef" translatable="false"> Ala Khafef </string>
-    <string name="matam_ala_elnasea" translatable="false"> Ala Elnasea </string>
-    <string name="matam_4pices" translatable="false"> 4 pices Food </string>
-    <string name="matam_for_seasons_crepe" translatable="false"> For Seasons Crepe </string>
-    <string name="matam_for_u" translatable="false"> For You </string>
-    <string name="matam_7days_crepe" translatable="false"> 7 Days Crepe </string>
-    <string name="matam7_two" translatable="false"> 7 Two </string>
-    <string name="matam7_geeks" translatable="false"> 7 GEEKS </string>
-    <string name="matam90s_berger" translatable="false"> 90`S BurGer </string>
-    <string name="matam_abo_ali" translatable="false"> Abo Ali</string>
-    <string name="matam_abo_amr" translatable="false"> Abo Amr </string>
-    <string name="matam_abo_mazen" translatable="false"> Abo Mazen </string>
-    <string name="matam_asmak_abo_ail" translatable="false"> Asmak Abo Ali </string>
-    <string name="matam_ahel_elshame" translatable="false"> Ahel Alsham </string>
-    <string name="matam_hassouna" translatable="false"> Hassouna </string>
-    <string name="matam_anwar_elshame" translatable="false"> Anwar Elshame </string>
-    <string name="matam_crepe_zone" translatable="false"> Crepe Zone</string>
-    <string name="matam_city_crepe" translatable="false"> City Crepe </string>
-    <string name="matam_nagef" translatable="false"> Nagaf </string>
-    <string name="matam_konoz" translatable="false"> Konoze </string>
-    <string name="matma_waseem_elsory" translatable="false"> Waseem Elsoory </string>
-    <string name="matma_ba7ri" translatable="false"> Ba7Ri </string>
-    <string name="matma_bab_abdo" translatable="false"> Bab Abdo </string>
+    <string name="register" translatable="false">Register</string>
 
 
 

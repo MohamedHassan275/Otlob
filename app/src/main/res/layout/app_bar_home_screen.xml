@@ -7,11 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".HomeScreenActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarMenu"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary">
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarMenu"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary">
 
 
         <LinearLayout
@@ -23,10 +30,11 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/menu"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/search"/>
@@ -58,7 +66,11 @@
 
         </LinearLayout>
 
-    </android.support.v7.widget.Toolbar>
+        </android.support.v7.widget.Toolbar>
+
+
+
+    </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_home_screen" />
 

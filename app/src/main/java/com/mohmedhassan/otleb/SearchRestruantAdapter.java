@@ -1,6 +1,7 @@
 package com.mohmedhassan.otleb;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -48,6 +49,16 @@ public class SearchRestruantAdapter extends RecyclerView.Adapter<SearchRestruant
             super(view);
             Restruant_Name = (TextView) view.findViewById(R.id.restruant_name);
             Restruant_Image = (ImageView) view.findViewById(R.id.restruant_image);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent = new Intent(itemView.getContext(), HomeScreenActivity.class);
+
+                    itemView.getContext().startActivity(intent);
+                }
+            });
 
         }
     }

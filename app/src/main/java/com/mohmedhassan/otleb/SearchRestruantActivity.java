@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -13,25 +14,19 @@ public class SearchRestruantActivity extends AppCompatActivity {
 
     Context context;
     private ArrayList<SearchRestruantModel> searchRestruantModels = new ArrayList<>();
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerViewRestruant;
     private SearchRestruantAdapter searchRestruantAdapter;
 
-    private String Restruant_Name[] = {String.valueOf(R.string.matam_100lavad), String.valueOf(R.string.matam_to_eat),
-            String.valueOf(R.string.matam_2m_express), String.valueOf(R.string.matam_ali_khafef), String.valueOf(R.string.matam_ala_elnasea),
-            String.valueOf(R.string.matam_4pices), String.valueOf(R.string.matam_for_seasons_crepe), String.valueOf(R.string.matam_for_u),
-            String.valueOf(R.string.matam_7days_crepe), String.valueOf(R.string.matam7_two), String.valueOf(R.string.matam7_geeks),
-            String.valueOf(R.string.matam90s_berger), String.valueOf(R.string.matam_abo_ali), String.valueOf(R.string.matam_abo_amr),
-            String.valueOf(R.string.matam_abo_mazen), String.valueOf(R.string.matam_asmak_abo_ail), String.valueOf(R.string.matam_ahel_elshame),
-            String.valueOf(R.string.matam_hassouna), String.valueOf(R.string.matam_anwar_elshame), String.valueOf(R.string.matam_crepe_zone),
-            String.valueOf(R.string.matam_city_crepe), String.valueOf(R.string.matam_nagef), String.valueOf(R.string.matam_konoz),
-            String.valueOf(R.string.matma_waseem_elsory), String.valueOf(R.string.matma_ba7ri), String.valueOf(R.string.matma_bab_abdo)};
+    private String Restruant_Name[] = {"100 Lava","2 eat","2M Express","علي خفيف","علي الناصية","4 pices Food","فور سيزون كريب",
+            " فور يو","7 Days Crepe","7 Two", "7 جيكز","90`S BurGer","ابو علي","Abo ابو عمرو","ابو مازن السوري","اسماك ابو علي ",
+            "اهل الشام", "حسونة","انوار الشام","Crepe Zone","City Crepe","نجف", "كنوز","وسام السوري","بحري","باب عبده"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_restruant);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerViewRestruant = (RecyclerView) findViewById(R.id.recyclerview);
 
         searchRestruantModels = new ArrayList<>();
         for (int i = 0; i < Restruant_Name.length; i++) {
@@ -42,14 +37,29 @@ public class SearchRestruantActivity extends AppCompatActivity {
             searchRestruantModels.add(roomDetailsListData);
 
 
-            searchRestruantAdapter = new SearchRestruantAdapter(context, searchRestruantModels);
+            searchRestruantAdapter = new SearchRestruantAdapter(SearchRestruantActivity.this, searchRestruantModels);
             RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-            recyclerView.setLayoutManager(mLayoutManager);
-            recyclerView.setItemAnimator(new DefaultItemAnimator());
-            recyclerView.setAdapter(searchRestruantAdapter);
+            recyclerViewRestruant.setLayoutManager(mLayoutManager);
+            recyclerViewRestruant.setItemAnimator(new DefaultItemAnimator());
+            recyclerViewRestruant.setAdapter(searchRestruantAdapter);
 
 
         }
+
+        recyclerViewRestruant.addOnItemTouchListener(new RecyclerTouchListener(context, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(android.view.View view, int position) {
+
+               //  Toast.makeText(SearchRestruantActivity.this, searchRestruantModel.getRestruant_Name() + " is selected!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongClick(android.view.View view, int position) {
+
+            }
+
+        }, recyclerViewRestruant));
+
 
     }
 }

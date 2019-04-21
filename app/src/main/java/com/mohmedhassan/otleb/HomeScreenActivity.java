@@ -16,11 +16,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class HomeScreenActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Button btn_login_homeScreen;
     ImageView imageView_Search;
 
     @Override
@@ -32,6 +34,7 @@ public class HomeScreenActivity extends AppCompatActivity
 
         HomeScreenActivity.this.setTitle("Otleb");
         imageView_Search = findViewById(R.id.search);
+        btn_login_homeScreen = findViewById(R.id.btn_login_homeScreen);
 
         imageView_Search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,8 +45,16 @@ public class HomeScreenActivity extends AppCompatActivity
             }
         });
 
-        Drawable drawable = ContextCompat.getDrawable(HomeScreenActivity.this,R.mipmap.setting);
-        toolbar.setOverflowIcon(drawable);
+        btn_login_homeScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(HomeScreenActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

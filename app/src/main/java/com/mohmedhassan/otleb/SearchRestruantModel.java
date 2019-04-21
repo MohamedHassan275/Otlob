@@ -13,6 +13,7 @@ public class SearchRestruantModel {
     public SearchRestruantModel() {
     }
 
+
     public int getRestruant_photo() {
         return Restruant_photo;
     }

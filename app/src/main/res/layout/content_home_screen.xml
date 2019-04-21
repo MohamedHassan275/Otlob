@@ -115,6 +115,7 @@
                         android:textSize="17sp"/>
 
                     <Button
+                        android:id="@+id/btn_login_homeScreen"
                         android:text="تسجيل الدخول"
                         android:textColor="#12b909"
                         android:textSize="15sp"
